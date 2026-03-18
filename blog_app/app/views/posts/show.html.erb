@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+
+<p><%= @post.description %></p>
+
+<p> 
+  Author:
+  <%= @post.author.name %>
+</p>
+
+<%= link_to "Back", posts_path %>

@@ -1,0 +1,17 @@
+!.keep
+*.DS_Store
+*.swo
+*.swp
+*~
+.bundle
+.idea
+.tool-versions
+spec/dummy/db/*.sqlite3*
+spec/dummy/log
+gemfiles/*.lock
+gemfiles/vendor/
+log/*.log
+pkg
+tmp/
+doc/
+.yardoc/

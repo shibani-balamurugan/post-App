@@ -1,0 +1,18 @@
+current directory: /home/francium/ruby_practice/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+/home/francium/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/francium/ruby_practice/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260310-245395-ekgjm5 sitelibdir\=./.gem.20260310-245395-ekgjm5 clean
+
+current directory: /home/francium/ruby_practice/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260310-245395-ekgjm5 sitelibdir\=./.gem.20260310-245395-ekgjm5
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/francium/ruby_practice/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260310-245395-ekgjm5 sitelibdir\=./.gem.20260310-245395-ekgjm5 install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20260310-245395-ekgjm5/racc
+
+current directory: /home/francium/ruby_practice/blog_app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260310-245395-ekgjm5 sitelibdir\=./.gem.20260310-245395-ekgjm5 clean

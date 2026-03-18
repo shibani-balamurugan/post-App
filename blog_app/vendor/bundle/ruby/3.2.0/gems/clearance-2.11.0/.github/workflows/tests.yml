@@ -1,0 +1,46 @@
+name: CI Tests
+
+on:
+  push:
+    branches: "main"
+  pull_request:
+    branches: "*"
+
+jobs:
+  test:
+    name: "Ruby ${{ matrix.ruby }}, Rails ${{ matrix.gemfile }}"
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        gemfile:
+          - "7.1"
+          - "7.2"
+          - "8.0"
+        ruby:
+          - "3.2.9"
+          - "3.3.9"
+          - "3.4.5"
+
+    env:
+      BUNDLE_GEMFILE: gemfiles/rails_${{ matrix.gemfile }}.gemfile
+      RAILS_ENV: test
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: "Install Ruby ${{ matrix.ruby  }}"
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: "Reset app database"
+        run: |
+          bundle exec rake db:drop
+          bundle exec rake db:setup
+
+      - name: "Run tests"
+        run: bundle exec rake

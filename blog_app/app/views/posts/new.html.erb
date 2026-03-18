@@ -1,0 +1,27 @@
+<h1>New Post</h1>
+
+<%= form_with model: @post do |f| %>
+
+  <div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <h3>Author</h3>
+
+  <%= f.fields_for :author do |author_fields| %>
+    <div>
+      <%= author_fields.label :name %><br>
+      <%= author_fields.text_field :name %>
+    </div>
+  <% end %>
+
+  <br>
+  <%= f.submit %>
+
+<% end %>
